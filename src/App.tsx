@@ -20,10 +20,18 @@ interface LinkButtonProps {
 function LinkButton(props: LinkButtonProps) {
   return (
     <Link
-      className="flex gap-2 justify-start p-4 text-neutral-100 w-full hover:bg-cyan-900 rounded-md text-xl"
+      className="group/item p-4 rounded-md w-full
+      gap-2 text-xl text-neutral-100
+      hover:bg-cyan-900 hover:bg-opacity-25"
       to={props.route}
     >
-      {props.icon} {props.name}
+      <span
+        className="flex gap-2
+      transition group-hover/item:duration-500 group-hover/item:translate-x-2"
+      >
+        {props.icon}
+        {props.name}
+      </span>
     </Link>
 
   )
@@ -33,11 +41,12 @@ function App() {
   const [isMenu, setIsMenu] = useState(false)
 
   return (
-    <div className="relative flex">
+    <div className="flex">
 
       {
         (isMenu) ?
-          <div className="flex-none relative w-1/6 absolute:h-screen bg-auto">
+          <div className="flex-none sticky top-0 w-1/6 h-screen
+          transition hover:duration-500 hover:bg-opacity-20 hover:bg-slate-800 rounded-tr-[2.4rem]">
             <button
               className="absolute left-0 m-4"
               onClick={() => setIsMenu(!isMenu)}
@@ -59,12 +68,14 @@ function App() {
 
           </div>
           :
-          <button
-            className="absolute m-4"
-            onClick={() => setIsMenu(!isMenu)}
-          >
-            <List size={32} weight="bold" color="white" />
-          </button>
+          <div className="flex-none sticky top-0 h-screen">
+            <button
+              className="m-4"
+              onClick={() => setIsMenu(!isMenu)}
+            >
+              <List size={32} weight="bold" color="white" />
+            </button>
+          </div>
       }
 
       <Routes>

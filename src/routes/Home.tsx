@@ -22,7 +22,7 @@ export function Home() {
   //})
 
   return (
-    <div className="mx-auto flex flex-col items-center my-20 overflow-auto">
+    <div className="mx-auto flex flex-col items-center my-20 overflow-y-auto">
 
       <SearchBar />
 
