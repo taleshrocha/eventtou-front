@@ -39,6 +39,7 @@ function LinkButton(props: LinkButtonProps) {
 
 function App() {
   const [isMenu, setIsMenu] = useState(false)
+  const [userStatus, setUserStatus] = useState(false)
 
   return (
     <div className="flex">
@@ -46,7 +47,7 @@ function App() {
       {
         (isMenu) ?
           <div className="flex-none sticky top-0 w-1/6 h-screen
-          transition hover:duration-500 hover:bg-opacity-20 hover:bg-slate-800 rounded-tr-[2.4rem]">
+          transition hover:duration-1000 hover:bg-opacity-20 hover:bg-slate-800 rounded-tr-[2.4rem]">
             <button
               className="absolute left-0 m-4"
               onClick={() => setIsMenu(!isMenu)}
@@ -76,6 +77,26 @@ function App() {
               <List size={32} weight="bold" color="white" />
             </button>
           </div>
+      }
+
+
+      <button
+        className="absolute z-20 m-4 top-0 right-0"
+        onClick={() => setUserStatus(!userStatus)}
+      >
+        <img
+          className="rounded-full w-12 h-12"
+          src="https://avatars.githubusercontent.com/u/61332391?s=400&u=28a10fb384e6fc71a6d5ae3cfa36600916b5ef53&v=4"
+        />
+      </button>
+
+      {
+        (userStatus) ?
+          <div className="absolute shadow-white shadow-sm z-10 top-4 right-4 w-min h-min p-20 bg-cyan-900 rounded-[2rem]">
+            <h1> Tales H. Rocha dadsaasjd ças dshdahudud spdasduadaa dasuh dadahdadhawd</h1>
+          </div>
+          :
+          <></>
       }
 
       <Routes>
