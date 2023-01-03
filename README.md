@@ -15,8 +15,9 @@
   <p align="center">
   An platform to sell, resell, buy and manage tickets to events.
   </p>
-  </div>
-  [![vercel-deploy-badge]][vercel-deploy-url]
+</div>
+
+[![vercel-deploy-badge]][vercel-deploy-url]
 
 <!-- TABLE OF CONTENTS -->
 <details>
