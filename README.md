@@ -142,4 +142,4 @@ Done with ❤️ by  Tales Rocha 👋🏽 Contact me!
 [typescript-url]: https://www.typescriptlang.org/
 
 [vercel-deploy-badge]: https://img.shields.io/badge/view%20deploy-20232a?style=for-the-badge&logo=vercel
-[vercel-deploy-url]: 
+[vercel-deploy-url]: https://img.shields.io/badge/view%20deploy-20232a?style=for-the-badge&logo=vercel
