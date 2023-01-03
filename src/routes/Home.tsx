@@ -1,25 +1,25 @@
 import '../styles/main.css';
 import { EventsBanner } from '../components/EventsBanner';
 import { SearchBar } from '../components/SearchBar';
-//import axios from 'axios';
-//import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-//interface Event {
-//  id: number;
-//  name: string;
-//  address: string;
-//}
+interface Event {
+  id: number;
+  name: string;
+  address: string;
+}
 
 export function Home() {
-  //const [events, setEvents] = useState<Event[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
 
-  //useEffect(() => {
-  //  axios("http://localhost:8080/eventos")
-  //    .then(response => {
-  //      //setEvents(response.data)
-  //      console.log(response.data)
-  //    })
-  //})
+  useEffect(() => {
+    axios("http://localhost:8080/eventos")
+      .then(response => {
+        //setEvents(response.data)
+        console.log(response.data)
+      })
+  })
 
   return (
     <div className="mx-auto flex flex-col items-center my-20 overflow-y-auto">

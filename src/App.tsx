@@ -92,8 +92,13 @@ function App() {
 
       {
         (userStatus) ?
-          <div className="absolute shadow-white shadow-sm z-10 top-4 right-4 w-min h-min p-20 bg-cyan-900 rounded-[2rem]">
-            <h1> Tales H. Rocha dadsaasjd ças dshdahudud spdasduadaa dasuh dadahdadhawd</h1>
+          <div className="absolute z-10 top-4 right-4 w-max h-max p-20 grid
+          bg-cyan-900 rounded-md rounded-tr-[2rem]">
+            <img
+              className="place-self-center rounded-full w-20 h-20"
+              src="https://avatars.githubusercontent.com/u/61332391?s=400&u=28a10fb384e6fc71a6d5ae3cfa36600916b5ef53&v=4"
+            />
+            <h1 className="">Tales H. Rocha</h1>
           </div>
           :
           <></>
