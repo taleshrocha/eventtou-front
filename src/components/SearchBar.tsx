@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from 'phosphor-react'
+import { HiMagnifyingGlass } from 'react-icons/hi'
 import data from "../assets/MOCK_DATA.json"
 import { useState } from "react"
 
@@ -14,7 +14,7 @@ export function SearchBar() {
           onChange={event => setQuery(event.target.value)}
         />
         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-          <MagnifyingGlass size={25} color="white" />
+          <HiMagnifyingGlass size={25} color="white" />
         </div>
       </div>
 

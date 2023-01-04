@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-background {
+	/*background: linear-gradient(45deg, #000 60%, #164e63, #000, #000, #000);*/
+	background: radial-gradient(ellipse at top right, #000 10%, #164e63, #000 50%);
+	background-size: 600% 600%;
+	animation: gradientKey 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradientKey {
+	0% {
+		background-position: 100% 65%;
+	}
+	50% {
+		background-position: 100% 70%;
+	}
+	100% {
+	background-position: 100% 65%;
+	}
+}
