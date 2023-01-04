@@ -1,24 +1,26 @@
-import { useState } from 'react';
+import Image from 'next/image'
+import eventPic from '../../public/images/no-image.png'
 import { AiOutlineCalendar } from 'react-icons/ai'
 import { FiMapPin } from 'react-icons/fi'
 
-interface eventsBannerProps {
+interface eventBannerProps {
   name: string;
   place: string;
   day: number;
   month: number;
   year: number;
+  imagePath: string;
 }
 
-export function EventsBanner(props: eventsBannerProps) {
-  const [isInfo, setIsInfo] = useState(false)
-
+export function EventBanner(props: eventBannerProps) {
   return (
     <button
       className="relative rounded-lg overflow-hidden text-left"
-      onClick={() => setIsInfo(true)}
     >
-      <img src="\evento-1.png" alt="" />
+      <Image
+        src={eventPic}
+        alt=''
+      />
       <div className="w-full py-4 px-4 bg-neutral-800">
         <span className="mb-1 text-sm text-neutral-400 flex">
           <AiOutlineCalendar size={16} />
